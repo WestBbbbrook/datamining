@@ -27,6 +27,7 @@ class NewsSpider(scrapy.Spider):
     		#global txtid
     		#txtid = 0
     		#time.sleep(0.1)
+    		#修改cj字段为ty、gj、IT等等，自己看中国新闻网每类网址的名称
     		total = "http://www.chinanews.com/scroll-news/cj/{0}/{1}/news.shtml".format(year,dayday)
     		yield Request(total,meta = {"day":day},callback = self.info_1)
     	
